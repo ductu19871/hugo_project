@@ -11,6 +11,7 @@
     "license": "LGPL-3",
     "data": [
         "security/ir_rule.xml",
+        "data/stock_data.xml",
         "view/res_users_view.xml",
     ],
     "installable": True,
