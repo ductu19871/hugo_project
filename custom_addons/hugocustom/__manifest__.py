@@ -12,6 +12,7 @@
     "data": [
         "security/ir_rule.xml",
         "data/stock_data.xml",
+        "data/account_data.xml",
         "view/res_users_view.xml",
     ],
     "installable": True,

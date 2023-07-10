@@ -1,0 +1,13 @@
+<odoo> 
+    <record id="journal_hcm" model="account.journal">
+        <field name="name">HCM</field>
+        <field name="code">HCM</field>
+        <field name="type">sale</field>
+    </record>
+
+    <record id="journal_bpc" model="account.journal">
+        <field name="name">Bình Phước</field>
+        <field name="code">BPC</field>
+        <field name="type">sale</field>
+    </record>
+</odoo>
