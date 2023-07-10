@@ -12,3 +12,4 @@ class ResUsers(models.Model):
     brand_ids = fields.Many2many('product.brand', 'brand_user_rel', 'brand_id', 'user_id', 'Brands')
     categ_ids = fields.Many2many('product.category', 'categ_user_rel', 'categ_id', 'user_id', 'Product Categories')
     warehouse_ids = fields.Many2many('stock.warehouse', 'warehouse_user_rel', 'warehouse_id', 'user_id', 'Warehouse')
+    journal_ids = fields.Many2many('account.journal', 'journal_user_rel', 'journal_id', 'user_id', 'Journal')

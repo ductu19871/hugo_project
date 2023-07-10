@@ -10,6 +10,7 @@
                     <field name="brand_ids" widget="many2many_tags"/>
                     <field  name="categ_ids" widget="many2many_tags"/>
                     <field  name="warehouse_ids" widget="many2many_tags"/>
+                    <field  name="journal_ids" widget="many2many_tags"/>
                 </group>
             </xpath>
         </field>
