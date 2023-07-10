@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="0">
+   
+    <!-- <record id="product_product_for_user" model="ir.rule">
+        <field name="model_id" ref="product.model_product_product" />
+        <field name="domain_force">[('product_brand_id','in',user.brand_ids)]</field>
+        <field name="name">product_product_for_user</field>
+        <field eval="0" name="perm_unlink" />
+        <field eval="0" name="perm_write" />
+        <field eval="1" name="perm_read" />
+        <field eval="0" name="perm_create" />
+    </record> -->
+    <!-- <record id="product_template_for_user" model="ir.rule">
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="domain_force">['|', ('product_brand_id','=', False), ('product_brand_id','in',user.brand_ids.ids)]</field>
+        <field name="name">product_template_for_user</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field eval="0" name="perm_unlink" />
+        <field eval="0" name="perm_write" />
+        <field eval="1" name="perm_read" />
+        <field eval="0" name="perm_create" />
+    </record>
+
+    <record id="product_template_for_admin" model="ir.rule">
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="name">product_template_for_admin</field>
+        <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+        <field eval="0" name="perm_unlink" />
+        <field eval="0" name="perm_write" />
+        <field eval="1" name="perm_read" />
+        <field eval="0" name="perm_create" />
+    </record> -->
+
+
+</odoo>
