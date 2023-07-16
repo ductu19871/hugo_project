@@ -9,7 +9,15 @@ class ResUsers(models.Model):
 
     _inherit = "res.users"
 
-    brand_ids = fields.Many2many('product.brand', 'brand_user_rel', 'brand_id', 'user_id', 'Brands')
-    categ_ids = fields.Many2many('product.category', 'categ_user_rel', 'categ_id', 'user_id', 'Product Categories')
-    warehouse_ids = fields.Many2many('stock.warehouse', 'warehouse_user_rel', 'warehouse_id', 'user_id', 'Warehouse')
-    journal_ids = fields.Many2many('account.journal', 'journal_user_rel', 'journal_id', 'user_id', 'Journal')
+    brand_ids = fields.Many2many('product.brand', 'user_brand_rel',  'user_id', 'brand_id', 'Brands')
+    categ_ids = fields.Many2many('product.category', 'user_categ_rel',  'user_id', 'categ_id', 'Product Categories')
+    warehouse_ids = fields.Many2many('stock.warehouse', 'user_warehouse_rel',  'user_id', 'warehouse_id','Warehouse')
+    journal_ids = fields.Many2many('account.journal', 'user_journal_rel',  'user_id', 'journal_id', 'Journal')
+
+
+    def write(self, data):
+        if 'brand_ids' in data or 'categ_ids' in data or 'warehouse_ids' in data or 'journal_ids' in data:
+            self.clear_caches()
+        res = super(ResUsers, self).write(data)
+        return res
+

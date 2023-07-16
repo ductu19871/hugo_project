@@ -35,4 +35,26 @@
         <field eval="1" name="perm_create" />
     </record>
 
+    <record id="stock_picking_type_warehouse_rule" model="ir.rule">
+        <field name="model_id" ref="stock.model_stock_picking_type" />
+        <field name="domain_force">[('warehouse_id', 'in', user.warehouse_ids.ids)]</field>
+        <field name="name">stock_picking_type_warehouse</field>
+        <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>
+        <field eval="1" name="perm_unlink" />
+        <field eval="1" name="perm_write" />
+        <field eval="1" name="perm_read" />
+        <field eval="1" name="perm_create" />
+    </record>
+
+    <record id="stock_picking_warehouse_rule" model="ir.rule">
+        <field name="model_id" ref="stock.model_stock_picking" />
+        <field name="domain_force">	[
+            ('picking_type_id.warehouse_id','in',user.warehouse_ids.ids)]</field>
+        <field name="name">stock_picking_type_warehouse</field>
+        <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>
+        <field eval="1" name="perm_unlink" />
+        <field eval="1" name="perm_write" />
+        <field eval="1" name="perm_read" />
+        <field eval="1" name="perm_create" />
+    </record>
 </odoo>
