@@ -7,7 +7,7 @@
     "author": "NDT ",
     "website": "",
     "category": "Generic",
-    "depends": ["product_brand"],
+    "depends": ["product_brand",'stock','account'],
     "license": "LGPL-3",
     "data": [
         "security/ir_rule.xml",
