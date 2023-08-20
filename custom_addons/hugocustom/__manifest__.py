@@ -14,6 +14,7 @@
         "data/stock_data.xml",
         "data/account_data.xml",
         "view/res_users_view.xml",
+        "view/sale_order_view.xml",
     ],
     "installable": True,
 }
