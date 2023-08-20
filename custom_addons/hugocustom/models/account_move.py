@@ -8,7 +8,9 @@ class AM(models.Model):
     @api.model
     def _search_default_journal(self, journal_types):
         company_id = self._context.get('default_company_id', self.env.company.id)
-        domain = [('company_id', '=', company_id), ('type', 'in', journal_types), ('warehouse_id','=', self.env.user.warehouse_id.id)]# custome only here
+
+        warehouse_id = self._context.get('overwrite_user_warehouse_id') or self.env.user.warehouse_id
+        domain = [('company_id', '=', company_id), ('type', 'in', journal_types), ('warehouse_id','=', warehouse_id.id)]# custome only here
 
         journal = None
         if self._context.get('default_currency_id'):
