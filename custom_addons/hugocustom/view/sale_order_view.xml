@@ -4,7 +4,11 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
+                <field name="source_id" position="replace"/>
                 <field name="payment_term_id" position="after">
+                    <field name="source_id" />
+                </field>
+                <field name="sale_order_template_id" position="after">
                     <field name="quotation_term" />
                     <field name="payment_method_id" />
                 </field>
