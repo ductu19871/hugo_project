@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-21 01:12+0000\n"
-"PO-Revision-Date: 2023-08-21 01:12+0000\n"
+"POT-Creation-Date: 2023-08-21 02:17+0000\n"
+"PO-Revision-Date: 2023-08-21 02:17+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -41,11 +41,6 @@ msgid "Customer Invoices HCM"
 msgstr ""
 
 #. module: hugocustom
-#: model:ir.model.fields,field_description:hugocustom.field_sale_order__add_state
-msgid "Các trạng thái của đơn hàng"
-msgstr ""
-
-#. module: hugocustom
 #: model:ir.model.fields.selection,name:hugocustom.selection__sale_order__add_state__deliveried
 msgid "Giao hàng thành công"
 msgstr ""
@@ -65,14 +60,6 @@ msgstr "Sổ nhật ký"
 #: model:ir.model,name:hugocustom.model_account_move
 msgid "Journal Entry"
 msgstr "Bút toán"
-
-#. module: hugocustom
-#: code:addons/hugocustom/models/account_move.py:0
-#, python-format
-msgid ""
-"No journal could be found in company %(company_name)s for any of those "
-"types: %(journal_types)s"
-msgstr ""
 
 #. module: hugocustom
 #: model:ir.model.fields,field_description:hugocustom.field_sale_order__payment_method_id
@@ -98,6 +85,11 @@ msgstr "Mẫu sản phẩm"
 #: model:ir.model.fields,field_description:hugocustom.field_sale_order__quotation_term
 msgid "Quotation Term"
 msgstr "Hiệu lực báo giá"
+
+#. module: hugocustom
+#: model:ir.model.fields,field_description:hugocustom.field_sale_order__add_state
+msgid "Sale order state"
+msgstr "Các trạng thái của đơn hàng"
 
 #. module: hugocustom
 #: model:ir.model,name:hugocustom.model_sale_order
