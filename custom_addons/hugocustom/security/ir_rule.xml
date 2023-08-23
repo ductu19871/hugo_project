@@ -26,6 +26,21 @@
         <field eval="1" name="perm_create" />
     </record>
 
+
+      <record id="warehouse_warehouse_admin" model="ir.rule">
+        <field name="model_id" ref="stock.model_stock_warehouse" />
+        <field name="domain_force">	[
+            (1,'=',1)]</field>
+        <field name="name">warehouse_warehouse_admin</field>
+        <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+        <field eval="1" name="perm_unlink" />
+        <field eval="1" name="perm_write" />
+        <field eval="1" name="perm_read" />
+        <field eval="1" name="perm_create" />
+    </record>
+
+
+
     <record id="sale_warehouse" model="ir.rule">
         <field name="model_id" ref="sale.model_sale_order" />
         <field name="domain_force">[('warehouse_id', 'in', user.warehouse_ids.ids)]</field>
