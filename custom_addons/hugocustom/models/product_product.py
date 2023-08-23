@@ -20,7 +20,15 @@ class PP(models.Model):
                      '|', ('categ_id','=', False), ('categ_id','child_of', self.env.user.categ_ids.ids),
                      ]
         return super(PP, self).read_group(domain, fields, groupby, offset=offset, limit=limit, orderby=orderby, lazy=lazy)
-
+    
+    # Thêm thông tin tồn kho
+    def name_get(self):
+        name_get_vals = super(PP, self).name_get()
+        read_vals = self.read(['qty_available', 'virtual_available', 'incoming_qty', 'outgoing_qty'])
+        new_res = [(name_get_val[0], '%s|%s|%s|%s|%s'%(name_get_val[1], read_val['qty_available'], read_val['virtual_available'],
+                                         read_val['incoming_qty'], read_val['outgoing_qty'])) for name_get_val, read_val in zip(name_get_vals, read_vals)]
+        return new_res
+    
 class PT(models.Model):
     _inherit = "product.template"
 
