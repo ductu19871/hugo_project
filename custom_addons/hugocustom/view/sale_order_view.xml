@@ -12,6 +12,7 @@
                 <field name="sale_order_template_id" position="after">
                     <field name="quotation_term" />
                     <field name="payment_method_id" />
+                    <field name="delivery_method_id" />
                     <field name="advance_money" />
                 </field>
             </field>
